@@ -27,7 +27,16 @@ class _MainPageState extends State<MainPage> {
           _selectedIndex == 0 ? "Categories" : "Favorites"
         ),
       ),
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            const SizedBox(height: 100),
+            Image.asset('assets/img/food.png',width: 120,height: 120,),
+            const SizedBox(height: 10),
+            Text("Chuchvara Group")
+          ],
+        ),
+      ),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
